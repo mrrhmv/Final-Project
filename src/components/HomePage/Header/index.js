@@ -6,6 +6,22 @@ import ItemOfCategories from "../ItemOfCategories";
 import Search from "../../HomePage/Search/index";
 import {Link} from "react-router-dom";
 class Header extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {class:"categories__wrapper hidden"};
+        this.DropDown = this.DropDown.bind(this);
+    }
+
+    DropDown(){
+        if(this.state.class==='categories__wrapper hidden'){
+            this.setState({class: 'categories__wrapper'});
+        }else{
+            this.setState({class: 'categories__wrapper hidden'});
+        }
+
+    }
+
     render() {
       const burgerLines=[
             {
@@ -41,7 +57,7 @@ class Header extends Component {
             <Link to='/new' className={'header__create-post-btn'}><i className="fas fa-plus"/></Link>
             <a href={'#'} onClick={toggleSearchContainer} className={'header__search-icon'}><i className="fas fa-search"/></a>
 
-            <div className="header__burger">
+            <div className="header__burger" onMouseEnter={this.DropDown} onMouseLeave={this.DropDown}>
                 {burgerLines.map((line, key)=>{
                     return(
                         <BurgerLine
@@ -60,6 +76,16 @@ class Header extends Component {
                 })}
             </div>
             <Search/>
+            <div className={this.state.class}>
+                <ul className={"categories__list"}>
+                    <li className={"categories__list--item"}>All</li>
+                    <li className={"categories__list--item"}>Books</li>
+                    <li className={"categories__list--item"}>Clothes/Men</li>
+                    <li className={"categories__list--item"}>Clothes/Women</li>
+                    <li className={"categories__list--item"}>For kids</li>
+                    <li className={"categories__list--item"}>Home</li>
+                </ul>
+            </div>
         </div>
     )
     }
