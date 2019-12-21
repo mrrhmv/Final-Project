@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import './index.scss';
 import './media-header.scss';
 import BurgerLine from "../BurgerLine/index";
 import ItemOfCategories from "../ItemOfCategories";
 import Search from "../../HomePage/Search/index";
 import {Link} from "react-router-dom";
+import {setPostsAction} from "../../../actions/postActions";
 class Header extends Component {
 
     constructor(props){
@@ -21,43 +23,48 @@ class Header extends Component {
         }
 
     }
-
     render() {
       const burgerLines=[
             {
-                class_name:'header__burger-line header__burger-line1'
+                class_name:'header__burger-line'
             },
             {
-                class_name:'header__burger-line header__burger-line2'
+                class_name:'header__burger-line'
             },
             {
-                class_name:'header__burger-line header__burger-line3'
+                class_name:'header__burger-line'
             }
         ];
         const categoryList=[
             {
                 content:'Donate',
-                handler: function (event) {
-                    event.preventDefault();
-                    filterByType('donate');
-                }
+                handler: ()=>{this.props.setPosts('donate')}
             },
             {
                 content:'Take it',
-                handler: function (event) {
-                    event.preventDefault();
-                    filterByType('take it');
-                }
+                handler: ()=>{this.props.setPosts('take it')}
             }
         ];
         return (
         <div className={'header'}>
+            {console.log('Post from header',this.props.posts)}
 
-            <Link to='/' className={'header__logo'}>Believe in Tomorrow</Link>
-            <Link to='/new' className={'header__create-post-btn'}><i className="fas fa-plus"/></Link>
-            <a href={'#'} onClick={toggleSearchContainer} className={'header__search-icon'}><i className="fas fa-search"/></a>
+            <Link to='/' className={'header__logo'}>
+                Believe in Tomorrow
+            </Link>
+            <Link to='/new' className={'header__create-post-btn'}>
+                <i className="fas fa-plus"/>
+            </Link>
 
-            <div className="header__burger" onMouseEnter={this.DropDown} onMouseLeave={this.DropDown}>
+            <a
+                href={'#'}
+                onClick={toggleSearchContainer}
+                className={'header__search-icon'}
+            >
+                <i className="fas fa-search"/>
+            </a>
+
+            <div className="header__burger" onClick={this.DropDown}>
                 {burgerLines.map((line, key)=>{
                     return(
                         <BurgerLine
@@ -71,7 +78,16 @@ class Header extends Component {
             <div className={'header__list-of-categories'}>
                 {categoryList.map((category, key)=>{
                     return(
-                        <ItemOfCategories key={key} handler={category.handler} content={category.content}/>
+                        <Link
+                            to={'/PLP'}
+                            key={key}
+                            className={'header__list-of-categories-item'}
+                        >
+                            <ItemOfCategories
+                                handler={category.handler}
+                                content={category.content}
+                            />
+                        </Link>
                     )
                 })}
             </div>
@@ -91,25 +107,22 @@ class Header extends Component {
     }
 
 }
-function filterByType(type){
-    fetch('https://my-json-server.typicode.com/LeylaM97/json_placeholder/posts')
-        .then(response => response.json())
-        .then(result => {
-            const items = result.filter(obj => obj.type===type);
-            const activeItems = items.filter(item => item.isActive === true);
-            if(activeItems.length!==0){
-                activeItems.forEach(i=>
-                    console.log(i)
-                )
-            }else(
-                console.log('No items')
-            )
-        })
-}
+
 function toggleSearchContainer(e) {
     e.preventDefault();
     document.querySelector('.header__search-container').classList.toggle('hidden');
     document.querySelector('.header__search-input').value='';
 }
+const mapStateToProps=(store)=>{
+   return  {
+       posts:store.posts
+   }
+};
 
-export default Header;
+const mapDispatchToProps = dispatch=>{
+    return{
+        setPosts: (type) => dispatch(setPostsAction(type))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

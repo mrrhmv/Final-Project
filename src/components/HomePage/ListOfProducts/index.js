@@ -1,6 +1,7 @@
 import React from "react";
 import "./ItemOfProducts/index"
 import ItemOfProducts from "./ItemOfProducts";
+import ItemOfProducts2 from "./ItemOfProducts2";
 
 class ListOfProducts extends React.Component{
     constructor(props){
@@ -15,7 +16,7 @@ class ListOfProducts extends React.Component{
         const  getData = async (options) =>{
             const url = options.url;
             const method = options.method;
-            console.log('getData = ', url, method)
+            console.log('getData = ', url, method);
             await fetch(url)
                 .then(result => result.json())
                 .then(data => {
@@ -48,19 +49,29 @@ class ListOfProducts extends React.Component{
             <div className="products__container">
                 {
                     this.state.isLoaded ? (
-                        this.state.posts.map(post=>(
-                        <ItemOfProducts
-                        image={post.photos[0]}
-                        title={post.title}
-                        date={post.date}
-                        />
-                    ))): "loading..."}
-                {
-                    this.state.isLoaded ? this.state.users.map(user=>(
-                        <ItemOfProducts
-                            city={user.city}
-                        />
-                    )) : "loading..."}
+                        this.state.posts.map((post,key)=> {
+                            if(post.isActive){
+                                if (post.photos[0] === "" || post.photos[0] == null)
+                                {
+                                    return(
+                                        <ItemOfProducts2
+                                            key={key}
+                                            title={post.title}
+                                            date={post.date}
+                                            description={post.description}
+                                        />)}
+                                else {
+                                    return (
+                                        <ItemOfProducts
+                                            key={key}
+                                            date={post.date}
+                                            title={post.title}
+                                            image={post.photos[0]}
+                                        />)
+                                }
+                            }
+                        })) : "Loading..."
+                }
             </div>
         )
     }

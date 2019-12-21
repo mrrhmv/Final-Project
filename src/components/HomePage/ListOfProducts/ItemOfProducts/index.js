@@ -1,4 +1,5 @@
 import React from "react";
+import './index.scss';
 
 class ItemOfProducts extends React.Component{
 
@@ -6,7 +7,7 @@ class ItemOfProducts extends React.Component{
         const {image, title, date} = this.props;
         return(
             <a className="products__item">
-                <img src={image} className="products__item-img">
+                <img alt={'img'} src={image} className="products__item-img">
 
                 </img>
                 <div className="products__item-content">
