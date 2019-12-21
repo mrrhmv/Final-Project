@@ -1,5 +1,5 @@
 import React from "react";
-import './ItemOfProducts/index'
+import "./ItemOfProducts/index"
 import ItemOfProducts from "./ItemOfProducts";
 
 class ListOfProducts extends React.Component{
@@ -41,7 +41,6 @@ class ListOfProducts extends React.Component{
         };
 
         getData({url: "https://my-json-server.typicode.com/LeylaM97/json_placeholder/posts", method: 'posts'});
-        getData({url: "https://my-json-server.typicode.com/LeylaM97/json_placeholder/users", method: 'users'});
     }
 
     render() {

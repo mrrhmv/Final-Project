@@ -8,13 +8,13 @@ class Footer extends React.Component{
                 {
                     all.map((item , index)=>{
                         return (
-                            <div className="footer__item">
+                            <div className="footer__item" key={index}>
                                 <a href={"#"} className="footer__item-header" onClick={handler} key={index}>{item.class_name}</a>
                                 <ul className="footer__item-content "  key={index}>
                                     {
-                                    item.list.map(listElem=>{
-                                        return <li className="footer__content-text">{listElem}</li>
-                                    })
+                                        item.list.map((listElem,key)=>{
+                                            return <li className="footer__content-text" key={key}>{listElem}</li>
+                                        })
                                     }
                                 </ul>
                             </div>
