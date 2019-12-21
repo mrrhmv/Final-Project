@@ -15,10 +15,9 @@ function PDP(){
         setOpen(false);
     };
         return(
-            <div>
+            <div className={"pdp"}>
              <DonateDetails/>
              <TakeItDetails/>
-             <button className={'PDP__edit-btn PDP__btn'} onClick={handleOpen}>Edit</button>
                 <Modal
                     aria-labelledby="simple-modal-title"
                     aria-describedby="simple-modal-description"
@@ -29,8 +28,10 @@ function PDP(){
                 </Modal>
 
 
-
-             <button className={'PDP__delete-btn PDP__btn'}>Delete</button>
+             <div className={'pdp__buttons'}>
+                 <button className={'PDP__edit-btn PDP__btn'} onClick={handleOpen}>Edit</button>
+                 <button className={'PDP__delete-btn PDP__btn'}>Delete</button>
+             </div>
             </div>
         )
 
