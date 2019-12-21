@@ -13,7 +13,7 @@ function App() {
                 <Switch>
                     <Route path='/' exact>
                     <Header/>
-                    <Menu/>
+                    <Menu/>/*added*/
                     </Route>
                     <Route path='/new'>
                         <Header/>
