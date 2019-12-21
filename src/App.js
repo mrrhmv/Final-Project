@@ -13,13 +13,16 @@ function App() {
                 <Switch>
                     <Route path='/' exact>
                     <Header/>
+                    <Menu/>
                     </Route>
                     <Route path='/new'>
                         <Header/>
+                        <Menu/>
                         <CreateNewPost/>
                     </Route>
                     <Route path='/PDP'>
                         <Header/>
+                        <Menu/>
                         <PDP/>
                     </Route>
                 </Switch>
