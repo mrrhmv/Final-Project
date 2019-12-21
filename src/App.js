@@ -2,6 +2,9 @@ import React from 'react';
 import './reset.scss'
 import Header from "./components/HomePage/Header";
 import CreateNewPost from "./components/CreateNewPost";
+import Footer from "./components/HomePage/Footer";
+import './components/HomePage/Footer/index.scss';
+import './components/HomePage/Footer/media.scss';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import PDP from "./components/PDP";
 
