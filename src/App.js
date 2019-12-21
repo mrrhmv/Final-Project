@@ -1,11 +1,31 @@
 import React from 'react';
+import './reset.scss'
+import Header from "./components/HomePage/Header";
+import CreateNewPost from "./components/CreateNewPost";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import PDP from "./components/PDP";
 
 function App() {
     return (
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis magni perferendis?</p>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cumque laborum mollitia necessitatibus provident quas quidem quo ratione rerum sed? Fuga maxime suscipit veniam. Cum dolorem est nemo tempore ullam.
-        </div>
+
+            <Router>
+                <div>
+                <Switch>
+                    <Route path='/' exact>
+                    <Header/>
+                    </Route>
+                    <Route path='/new'>
+                        <Header/>
+                        <CreateNewPost/>
+                    </Route>
+                    <Route path='/PDP'>
+                        <Header/>
+                        <PDP/>
+                    </Route>
+                </Switch>
+                </div>
+            </Router>
+
     )
 }
 
