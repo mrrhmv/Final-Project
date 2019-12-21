@@ -6,9 +6,25 @@ import './media-createNewPost.scss';
 class CreateNewPost extends Component{
     constructor(props) {
         super(props);
-        this.state = {formName:'User Details Form', userId:'',valueName: '', valueEmail:'',valuePhone: '', valueCity:'', valueType:'donate',valueTitle:'',
-            valueDescription:'', valueImage:[], categoryId:'', valueCategory:'', valueSubCategory:'', photosClass:'create-post__form-item',
-            form1:'create-post__form', form2:'create-post__form hidden', required:true};
+        this.state = {
+            formName:'User Details Form',
+            userId:'',
+            valueName: '',
+            valueEmail:'',
+            valuePhone: '',
+            valueCity:'',
+            valueType:'donate',
+            valueTitle:'',
+            valueDescription:'',
+            valueImage:[],
+            categoryId:'',
+            valueCategory:'',
+            valueSubCategory:'',
+            photosClass:'create-post__form-item',
+            form1:'create-post__form',
+            form2:'create-post__form hidden',
+            required:true
+        };
         this.Next = this.Next.bind(this);
         this.Create = this.Create.bind(this);
     }

@@ -1,30 +1,35 @@
 import React from 'react';
-import './reset.scss'
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
 import Header from "./components/HomePage/Header";
 import CreateNewPost from "./components/CreateNewPost";
 import Footer from "./components/HomePage/Footer";
+import PDP from "./components/PDP";
+import PLP from './components/PLP/PLP';
+import ListOfProducts from "./components/HomePage/ListOfProducts";
+
+import './reset.scss'
 import './components/HomePage/Footer/index.scss';
 import './components/HomePage/Footer/media.scss';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import PDP from "./components/PDP";
+
 
 function App() {
     const elements = [{
-        class_name: "About-us",
+        class_name: "About",
         list : [
-            'Contact', 'How to Purchase', 'Payment'
+            'About', 'History'
         ],
         header: "About"
     }, {
-        class_name: "Follow-us",
+        class_name: "Follow",
         list : [
-            'Facebook', 'Instagram', 'Pinterest'
+            'Facebook', 'Instagram'
         ],
         header: "Follow"
     } , {
         class_name: "Help",
         list : [
-            'History', 'Policy', "Work with Us"
+            'Contact', 'How to Create New Post'
         ],
         header: "Help"
     }];
@@ -34,13 +39,14 @@ function App() {
                 <Switch>
                     <Route path='/' exact>
                     <Header/>
+                    <ListOfProducts/>
                     <Footer
                             all={elements}
                             class_name="footer"/>
                     </Route>
-                    <Route path='/new'>
+                    <Route path='/PLP'>
                         <Header/>
-                        <CreateNewPost/>
+                        <PLP/>
                         <Footer
                             all={elements}
                             class_name="footer"/>
@@ -52,10 +58,30 @@ function App() {
                             all={elements}
                             class_name="footer"/>
                     </Route>
+                    <Route path='/new'>
+                    <Header/>
+                    <CreateNewPost/>
+                    <Footer
+                        all={elements}
+                        class_name="footer"/>
+                </Route>
                 </Switch>
                 </div>
             </Router>
     )
 }
+//
+// const mapStateToProps = store=>{
+//     console.log(store);
+//     return{
+//         post:store.post.type
+//     }
+// };
+//
+// const mapDispatchToProps = dispatch=>{
+//     return{
+//     }
+// };
+
 
 export default App;

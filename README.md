@@ -1,3 +1,6 @@
+##Link To Fake PlaceHolder  
+https://my-json-server.typicode.com/LeylaM97/json_placeholder 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
