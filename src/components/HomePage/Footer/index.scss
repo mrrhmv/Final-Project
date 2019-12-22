@@ -9,6 +9,7 @@
   &__item{
     margin-top: 1rem;
     margin-bottom: 1rem;
+
   }
   &__item-header{
     text-decoration: none;
@@ -26,4 +27,8 @@
 
 .active{
   display: block;
+}
+.footer__content-text:hover {
+  color: #33bb77;
+  cursor: pointer;
 }

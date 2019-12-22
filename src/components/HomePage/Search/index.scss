@@ -46,7 +46,7 @@
     color: white;
   }
   &__search-btn:hover{
-    color: #33BB77;
+    color: #33bb77;
   }
   &__cancel-btn{
     font-size: 1rem;
@@ -58,6 +58,9 @@
     color: #333333;
   }
   &__cancel-btn:hover{
-  color: #33BB77;
+  color: #cc3333;
   }
+}
+.button{
+  background-color: #cc3333;
 }
