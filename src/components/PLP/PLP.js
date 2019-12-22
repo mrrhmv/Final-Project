@@ -6,7 +6,7 @@ class PLP extends React.Component{
 
     render() {
         return(
-         <div>
+         <div className={'plp_wrap'}>
              {
                  this.props.posts.posts.map((post,key)=>{
                 if(post.type === "donate"){
