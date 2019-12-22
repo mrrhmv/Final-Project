@@ -18,24 +18,24 @@
     grid-template-columns:auto;
     grid-template-rows: repeat(2,auto);
     justify-content: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #333333;
   }
 
   &__search-input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333333;
     outline: none;
     font-size: 1rem;
   }
   &__search-input::placeholder{
     font-size: 1rem;
-    color: black;
+    color: #333333;
   }
   &__search-btn {
     margin-top: 2rem;
     margin-right: 2rem;
     margin-left: 2rem;
-    background: black;
+    background: #333333;
     border: none;
     cursor: pointer;
     outline: none;
@@ -46,20 +46,18 @@
     color: white;
   }
   &__search-btn:hover{
-    color: #0066cc;
+    color: #33BB77;
   }
   &__cancel-btn{
     font-size: 1rem;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333333;
     cursor: pointer;
     background-color: white;
     outline: none;
+    color: #333333;
   }
   &__cancel-btn:hover{
-  color: #0066cc;
+  color: #33BB77;
   }
-}
-.button{
-  background-color: red;
 }

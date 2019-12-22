@@ -30,16 +30,16 @@ class DonateDetails extends Component{
 
             <div className={'donate-details'}>
                 <div className={'donate-details__top'}>
-                    <h3 className={'donate-details__header'}>Title{title}</h3>
-                    <p className={'donate-details__city-date'}>Baku{city}, 12-04-2019{date}</p>
-                    <img src={'https://via.placeholder.com/450/771796'} className={'donate-details__img'}/>
+                    <h3 className={'donate-details__header'}>Shoes{title}</h3>
+                    <p className={'donate-details__city-date'}>Baku{city}, 18-11-2019{date}</p>
+                    <img src={'https://via.placeholder.com/300/771796'} className={'donate-details__img'}/>
                 </div>
                 <div className={'donate-bottom'}>
                     <div className={'donate-details__desc-container'}>
                         <p className={'donate-details__title'}>Description</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id iusto sapiente voluptates! Adipisci in iure nemo odit similique tempora veritatis! Consectetur eum fuga natus nostrum quod sapiente vero vitae?{description}</p>
                         <p  className={'donate-details__title'}>Category</p>
-                        <p>Books{category}</p>
+                        <p>Shoes{category}</p>
                     </div>
                     <div className={'donate-details__user-info'}>
                         <p className={'donate-details__title'}>User Info</p>

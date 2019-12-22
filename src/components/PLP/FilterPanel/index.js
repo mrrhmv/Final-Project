@@ -20,7 +20,9 @@ class FilterPanel extends React.Component{
         const categoryList=[
             {
                 content:'BOOKS',
-                handler: ()=>{}
+                handler: ()=>{
+
+                }
             },
             {
                 content:'FOR KIDS',
@@ -38,7 +40,6 @@ class FilterPanel extends React.Component{
 
         return (
             <div className="filter">
-
                 <a href="#" onClick={(event)=>{
                     event.preventDefault();
                     if(this.state.class==="filter__content hidden"){

@@ -3,22 +3,22 @@
   background-color: #fff;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  color:#333333;
   &__header{
     text-align: center;
     font-size: 1.5rem;
     text-transform: capitalize;
     padding-bottom: 1.5rem;
-    color:  #009900;
+    color:  #33BB77;
   }
   &__formName{
     text-align: center;
     padding-bottom: 1rem;
-
   }
   &__form{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    border: 1px solid  #009900;
+    border: 1px solid  #33BB77;
     border-radius: 0.3rem;
     display: grid;
     grid-auto-rows: auto;
@@ -42,7 +42,7 @@
   &__form-input{
     box-shadow: 5px 5px 20px #a6a6a6;
     border-radius: 0.2rem;
-    border: 1px solid grey;
+    border: 1px solid #333333;
     font-size: 1rem;
     padding-left: 0.3rem;
     padding-top: 0.3rem;
@@ -51,7 +51,7 @@
     font-style: italic;
   }
   &__next-btn{
-    background-color: #009900;
+    background-color: #33BB77;
     color: #fff;
     border: 2px transparent solid;
     justify-self: center;
@@ -64,9 +64,9 @@
     margin-bottom: 1.5rem;
   }
   &__next-btn:hover{
-   color:#009900;
+   color:#33BB77;
     background-color: #ffffff;
-    border: 2px #009900 solid;
+    border: 2px #33BB77 solid;
   }
 
   &__fieldset{

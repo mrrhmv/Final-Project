@@ -29,7 +29,7 @@ function App() {
     } , {
         class_name: "Help",
         list : [
-            'Contact', 'How to Create New Post'
+            'Contact'
         ],
         header: "Help"
     }];
@@ -70,18 +70,4 @@ function App() {
             </Router>
     )
 }
-//
-// const mapStateToProps = store=>{
-//     console.log(store);
-//     return{
-//         post:store.post.type
-//     }
-// };
-//
-// const mapDispatchToProps = dispatch=>{
-//     return{
-//     }
-// };
-
-
 export default App;

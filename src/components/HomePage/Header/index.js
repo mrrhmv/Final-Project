@@ -41,7 +41,7 @@ class Header extends Component {
                 handler: ()=>{this.props.setPosts('donate')}
             },
             {
-                content:'Take it',
+                content:'Needs',
                 handler: ()=>{this.props.setPosts('take it')}
             }
         ];

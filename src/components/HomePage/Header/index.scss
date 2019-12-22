@@ -13,7 +13,7 @@ html{
     overflow: hidden;
     font-size: 1.2rem;
     text-decoration: none;
-    color: #bb77ff;
+    color: #33BB77;
     cursor: pointer;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -26,14 +26,14 @@ html{
     color: white;
     font-size: 1.1rem;
     border-radius: 0.3rem;
-    background-color: #53ff1a;
+    background-color: #33BB77;
     padding: 0.5rem 1.2rem;
     outline: none;
     cursor: pointer;
     justify-self: center;
   }
   &__create-post-btn:hover{
-    color:#53ff1a;
+    color: #33BB77;
     background-color: #ffffff;
   }
 
@@ -44,7 +44,7 @@ html{
     justify-self: end;
   }
   &__search-icon:hover{
-    color: #bb77ff;
+    color: #33BB77;
   }
   &__burger{
     order:4;
@@ -81,7 +81,7 @@ html{
     font-size: 1rem;
   }
   &__list-of-categories-item:hover{
-    color: #bb77ff;
+    color: #33BB77;
   }
 }
 .categories {
@@ -99,13 +99,13 @@ html{
       font-weight: 100;
       color: #ffffff;
       background-color: #333333;
-      padding: 1rem;
+      padding:  1rem 2rem;
       border-top: 1px solid #444444;
       &:last-child {
         border-bottom: 1px solid #444444;
       }
       &:hover {
-        color: #bb77ff;
+        color: #33BB77;
         cursor: pointer;
       }
     }
