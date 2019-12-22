@@ -24,6 +24,10 @@ html {
       text-decoration: none;
       color: white;
       margin-bottom: 1rem;
+      &:hover {
+        color: #33bb77;
+        text-decoration: none;
+      }
      }
      &-content {
        display: none;
@@ -45,6 +49,6 @@ html {
   display: block;
 }
 .footer__content-text:hover {
-  color: #bb77ff;
+  color: #33bb77;
   cursor: pointer;
 }

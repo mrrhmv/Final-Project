@@ -8,7 +8,7 @@
     font-size: 1.5rem;
     text-transform: capitalize;
     padding-bottom: 1.5rem;
-    color:  #009900;
+    color:  #33bb77;
   }
   &__formName{
     text-align: center;
@@ -18,7 +18,7 @@
   &__form{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    border: 1px solid  #009900;
+    border: 1px solid  #33bb77;
     border-radius: 0.3rem;
     display: grid;
     grid-auto-rows: auto;
@@ -37,7 +37,7 @@
   }
   &__form-label:after{
     content: '*';
-    color: red;
+    color: #cc3333;
   }
   &__form-input{
     box-shadow: 5px 5px 20px #a6a6a6;
@@ -51,7 +51,7 @@
     font-style: italic;
   }
   &__next-btn{
-    background-color: #009900;
+    background-color: #33bb77;
     color: #fff;
     border: 2px transparent solid;
     justify-self: center;
@@ -64,9 +64,9 @@
     margin-bottom: 1.5rem;
   }
   &__next-btn:hover{
-   color:#009900;
+   color: #33bb77;
     background-color: #ffffff;
-    border: 2px #009900 solid;
+    border: 2px #33bb77 solid;
   }
 
   &__fieldset{
