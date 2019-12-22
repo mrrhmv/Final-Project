@@ -2,6 +2,12 @@
   html{
     font-size: 20px;
   }
+
+  .active {
+    &:hover {
+      color: #33bb77;
+    }
+  }
 }
 
 @media screen and (min-width: 640px) {
