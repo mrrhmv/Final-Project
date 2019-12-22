@@ -11,29 +11,31 @@ html{
   &__logo{
     order:1;
     overflow: hidden;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    color: #33BB77;
+    color: #33bb77;
     cursor: pointer;
     margin-left: 1rem;
     margin-right: 1rem;
+    font-weight: bold;
   }
   &__logo:hover{
     color: #fff;
+    text-decoration: none;
   }
   &__create-post-btn{
     order:2;
     color: white;
     font-size: 1.1rem;
     border-radius: 0.3rem;
-    background-color: #33BB77;
+    background-color: #33bb77;
     padding: 0.5rem 1.2rem;
     outline: none;
     cursor: pointer;
     justify-self: center;
   }
   &__create-post-btn:hover{
-    color: #33BB77;
+    color:#33bb77;
     background-color: #ffffff;
   }
 
@@ -44,7 +46,7 @@ html{
     justify-self: end;
   }
   &__search-icon:hover{
-    color: #33BB77;
+    color: #33bb77;
   }
   &__burger{
     order:4;
@@ -81,7 +83,8 @@ html{
     font-size: 1rem;
   }
   &__list-of-categories-item:hover{
-    color: #33BB77;
+    color: #33bb77;
+    text-decoration: none;
   }
 }
 .categories {
@@ -105,7 +108,7 @@ html{
         border-bottom: 1px solid #444444;
       }
       &:hover {
-        color: #33BB77;
+        color: #33bb77;
         cursor: pointer;
       }
     }

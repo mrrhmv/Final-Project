@@ -10,7 +10,8 @@ class PLP extends React.Component{
         return(
          <div>
              <FilterPanel/>
-             <div className="products__container">
+            
+         <div className={'plp_wrap'}>
              {
                  this.props.posts.posts.map((post,key)=>{
                 if(post.type === "donate") {

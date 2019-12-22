@@ -1,6 +1,7 @@
 .create-post{
+  background: linear-gradient(to bottom, rgba(0,0,0, 0.35), rgba(0,0,0, 0.35)),
+  url(https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8) no-repeat center fixed;
   font-family: sans-serif;
-  background-color: #fff;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   color:#333333;
@@ -9,22 +10,23 @@
     font-size: 1.5rem;
     text-transform: capitalize;
     padding-bottom: 1.5rem;
-    color:  #33BB77;
+    color: #ffffff;
   }
   &__formName{
     text-align: center;
     padding-bottom: 1rem;
+    color: #33BB77;
   }
   &__form{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    border: 1px solid  #33BB77;
     border-radius: 0.3rem;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: auto;
     justify-content: center;
-    box-shadow: 5px 5px 20px #a6a6a6;
   }
   &__form-item{
     font-weight: bold;
@@ -34,13 +36,15 @@
   &__form-label{
     font-size: 1.1rem;
     font-style: italic;
+    color: #33BB77;
   }
   &__form-label:after{
     content: '*';
-    color: red;
+    color: #cc3333;
   }
   &__form-input{
-    box-shadow: 5px 5px 20px #a6a6a6;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 20px #333333;
     border-radius: 0.2rem;
     border: 1px solid #333333;
     font-size: 1rem;
@@ -51,7 +55,7 @@
     font-style: italic;
   }
   &__next-btn{
-    background-color: #33BB77;
+    background-color: #33bb77;
     color: #fff;
     border: 2px transparent solid;
     justify-self: center;
@@ -64,9 +68,10 @@
     margin-bottom: 1.5rem;
   }
   &__next-btn:hover{
-   color:#33BB77;
+
+   color: #33bb77;
     background-color: #ffffff;
-    border: 2px #33BB77 solid;
+    border: 2px #33bb77 solid;
   }
 
   &__fieldset{

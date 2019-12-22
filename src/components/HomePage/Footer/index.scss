@@ -9,8 +9,10 @@
   &__item{
     margin-top: 1rem;
     margin-bottom: 1rem;
+
   }
   &__item-header{
+    font-weight: bold;
     text-decoration: none;
     color: #33bb77;
     font-size: 1.3rem;
@@ -35,3 +37,6 @@
   display: block;
 }
 
+.footer__content-text:hover {
+  cursor: pointer;
+}
