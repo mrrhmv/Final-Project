@@ -51,7 +51,7 @@ function App() {
                             all={elements}
                             class_name="footer"/>
                     </Route>
-                    <Route path='/PDP'>
+                    <Route path='/PDP/:id' component={PDP}>
                         <Header/>
                         <PDP/>
                         <Footer

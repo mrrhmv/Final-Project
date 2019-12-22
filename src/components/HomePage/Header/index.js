@@ -37,7 +37,7 @@ class Header extends Component {
         ];
         const categoryList=[
             {
-                content:'Donate',
+                content:'Donated',
                 handler: ()=>{this.props.setPosts('donate')}
             },
             {
