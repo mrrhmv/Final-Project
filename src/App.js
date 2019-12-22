@@ -29,7 +29,7 @@ function App() {
     } , {
         class_name: "Help",
         list : [
-            'Contact', 'How to Create New Post'
+            'Contact'
         ],
         header: "Help"
     }];
@@ -52,7 +52,7 @@ function App() {
                             all={elements}
                             class_name="footer"/>
                     </Route>
-                    <Route path='/PDP'>
+                    <Route path='/PDP/:id' component={PDP}>
                         <Header/>
                         <PDP/>
                         <Footer
@@ -71,18 +71,4 @@ function App() {
             </Router>
     )
 }
-//
-// const mapStateToProps = store=>{
-//     console.log(store);
-//     return{
-//         post:store.post.type
-//     }
-// };
-//
-// const mapDispatchToProps = dispatch=>{
-//     return{
-//     }
-// };
-
-
 export default App;

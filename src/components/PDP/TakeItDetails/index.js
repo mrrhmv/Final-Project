@@ -7,17 +7,34 @@ class TakeItDetails extends Component{
         const userInfo=[
             {
                 title:'Name',
-                content:`${name}`
+                content:`Ali Valiyev`
+                // ${name}`
             },
             {
                 title:'Email',
-                content:`${email}`
+                content:`ali.valiyev@mail.ru`
+                // ${email}
             },
             {
                 title:'Phone',
-                content:`${phone}`
+                content:`+994 55 987 65 43`
+                // ${phone}`
             }
         ];
+        // const userInfo=[
+        //     {
+        //         title:'Name',
+        //         content:`${name}`
+        //     },
+        //     {
+        //         title:'Email',
+        //         content:`${email}`
+        //     },
+        //     {
+        //         title:'Phone',
+        //         content:`${phone}`
+        //     }
+        // ];
 
         return(
             <div className={'donate-details'}>

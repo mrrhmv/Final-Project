@@ -5,6 +5,8 @@ class ItemOfProducts2 extends React.Component{
 
     render() {
         const {description, title, date} = this.props;
+
+        console.log('SLK prodItem 2 = this.props ===', this.props);
         return(
             <div className="products__item">
                 <div className="products__item_takeIt">

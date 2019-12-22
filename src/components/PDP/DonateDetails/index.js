@@ -1,37 +1,45 @@
 import React, {Component} from "react";
 import './donatedetails.scss';
 import UserInfo from "../UserInfo";
+import {connect} from "react-redux";
+
 class DonateDetails extends Component{
     render() {
+
+
         const {title,city,date,description,name,email,phone,category} = this.props;
         const userInfo=[
             {
                 title:'Name',
-                content:`${name}`
+                content:`Ali Valiyev`
+                // ${name}`
             },
             {
                 title:'Email',
-                content:`${email}`
+                content:`ali.valiyev@mail.ru`
+                // ${email}
             },
             {
                 title:'Phone',
-                content:`${phone}`
+                content:`+994 55 987 65 43`
+                // ${phone}`
             }
         ];
 
         return(
+
             <div className={'donate-details'}>
                 <div className={'donate-details__top'}>
-                    <h3 className={'donate-details__header'}>Title{title}</h3>
-                    <p className={'donate-details__city-date'}>Baku {city}, 12-04-2019 {date}</p>
-                    <img src={'https://via.placeholder.com/450/771796'} className={'donate-details__img'}/>
+                    <h3 className={'donate-details__header'}>Shoes{title}</h3>
+                    <p className={'donate-details__city-date'}>Baku{city}, 18-11-2019{date}</p>
+                    <img src={'https://via.placeholder.com/300/771796'} className={'donate-details__img'}/>
                 </div>
                 <div className={'donate-bottom'}>
                     <div className={'donate-details__desc-container'}>
                         <p className={'donate-details__title'}>Description</p>
-                        <p>{description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur autem cupiditate, delectus dicta dignissimos earum, exercitationem iusto nesciunt numquam, officiis praesentium ratione repellat reprehenderit rerum saepe similique tempora tenetur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id iusto sapiente voluptates! Adipisci in iure nemo odit similique tempora veritatis! Consectetur eum fuga natus nostrum quod sapiente vero vitae?{description}</p>
                         <p  className={'donate-details__title'}>Category</p>
-                        <p>Books {category}</p>
+                        <p>Shoes{category}</p>
                     </div>
                     <div className={'donate-details__user-info'}>
                         <p className={'donate-details__title'}>User Info</p>
@@ -48,5 +56,10 @@ class DonateDetails extends Component{
         )
     }
 }
+const mapStateToProps=(store)=>{
+    return  {
+        posts:store.posts
+    }
+};
 
-export default DonateDetails;
+export default connect(mapStateToProps)(DonateDetails);

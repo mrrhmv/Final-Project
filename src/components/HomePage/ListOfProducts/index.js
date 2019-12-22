@@ -22,14 +22,6 @@ class ListOfProducts extends React.Component{
                 .then(data => {
                     const obj = {};
                     obj[method] = data;
-                    console.log('TEST TEST ', Object.assign(
-                        {},
-                        {
-                            ...this.state,
-                            isLoaded: true,
-                        },
-                        obj
-                    ));
                     this.setState(Object.assign(
                         {},
                         {

@@ -37,11 +37,11 @@ class Header extends Component {
         ];
         const categoryList=[
             {
-                content:'Donate',
+                content:'Donated',
                 handler: ()=>{this.props.setPosts('donate')}
             },
             {
-                content:'Take it',
+                content:'Needs',
                 handler: ()=>{this.props.setPosts('take it')}
             }
         ];

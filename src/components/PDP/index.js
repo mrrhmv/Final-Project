@@ -4,7 +4,7 @@ import DonateDetails from "./DonateDetails";
 import TakeItDetails from "./TakeItDetails";
 import Modal from '@material-ui/core/Modal';
 
-function PDP(){
+function PDP(props){
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {
@@ -17,20 +17,20 @@ function PDP(){
         return(
             <div className={"pdp"}>
              <DonateDetails/>
-             <TakeItDetails/>
+             {/*<TakeItDetails/>*/}
                 <Modal
                     aria-labelledby="simple-modal-title"
                     aria-describedby="simple-modal-description"
                     open={open}
                     onClose={handleClose}
                 >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consectetur consequatur dicta eaque, enim facere fugit illo incidunt ipsum iure iusto minima, quaerat qui quo reiciendis repellendus similique tempora voluptates.</p>
+                    <p>Modal Window</p>
                 </Modal>
 
 
              <div className={'pdp__buttons'}>
                  <button className={'PDP__edit-btn PDP__btn'} onClick={handleOpen}>Edit</button>
-                 <button className={'PDP__delete-btn PDP__btn'}>Delete</button>
+                 <button className={'PDP__delete-btn PDP__btn'} onClick={handleOpen}>Delete</button>
              </div>
             </div>
         )

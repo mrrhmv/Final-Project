@@ -18,7 +18,7 @@
     grid-template-columns:auto;
     grid-template-rows: repeat(2,auto);
     justify-content: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #333333;
   }
 
   &__search-input {
@@ -55,6 +55,7 @@
     cursor: pointer;
     background-color: white;
     outline: none;
+    color: #333333;
   }
   &__cancel-btn:hover{
   color: #cc3333;
