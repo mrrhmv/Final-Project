@@ -8,15 +8,15 @@ class TakeItDetails extends Component{
         const userInfo=[
             {
                 title:'Name',
-                content:`Ali Valiyev`
+                content:`Orxan Babayev`
             },
             {
                 title:'Email',
-                content:`ali.valiyev@gmail.com`
+                content:`orxan.babayev@gmail.com`
             },
             {
                 title:'Phone',
-                content:`+994 55 555 55 55`
+                content:`+994 51 758 96 03`
             }
         ];
 
