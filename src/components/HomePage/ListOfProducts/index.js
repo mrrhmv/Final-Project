@@ -16,7 +16,6 @@ class ListOfProducts extends React.Component{
         const  getData = async (options) =>{
             const url = options.url;
             const method = options.method;
-            console.log('getData = ', url, method);
             await fetch(url)
                 .then(result => result.json())
                 .then(data => {

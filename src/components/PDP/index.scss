@@ -31,3 +31,61 @@
     border: 2px solid #33bb77;
   }
 }
+
+.modal-win{
+  font-family: Lato,sans-serif;
+  font-size: 1rem;
+  display: grid;
+  margin-top: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  &__header{
+    background-color: #33BB77;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__cancel-btn{
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__form{
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(5,auto);
+  }
+  &__form-desc{
+    text-align: justify;
+    padding: 1rem;
+    color: #333333;
+  }
+  &__input-label{
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    justify-self: center;
+  }
+  &__input{
+   margin-left: 1rem;
+   margin-right: 1rem;
+    justify-self: center;
+  }
+  &__submit-btn{
+    justify-self: center;
+    background-color: #33BB77;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__forgot-pin{
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+}
