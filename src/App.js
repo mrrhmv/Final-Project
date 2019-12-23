@@ -53,11 +53,6 @@ function App() {
                             class_name="footer"/>
                     </Route>
                     <Route path='/PDP/:id' component={PDP}>
-                        <Header/>
-                        <PDP/>
-                        <Footer
-                            all={elements}
-                            class_name="footer"/>
                     </Route>
                     <Route path='/new'>
                     <Header/>
