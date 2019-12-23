@@ -4,7 +4,7 @@ import donate from '../../../img/volunteer.png';
 import UserInfo from "../UserInfo";
 class TakeItDetails extends Component{
     render() {
-        const {title,city,date,description,name,email,phone,category} = this.props;
+        const {title,date,description} = this.props;
         const userInfo=[
             {
                 title:'Name',

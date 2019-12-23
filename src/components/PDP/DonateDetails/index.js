@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 
 class DonateDetails extends Component{
     render() {
-        const {title,city,date,description,name,email,phone,category,src} = this.props;
+        const {title,date,description,src} = this.props;
         const userInfo=[
             {
                 title:'Name',
