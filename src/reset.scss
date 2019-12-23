@@ -33,3 +33,11 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+a, ol, ul {
+  text-decoration: none;
+}
+
+a:hover, ol:hover, ul:hover {
+  text-decoration: none;
+}
