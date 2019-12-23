@@ -9,7 +9,7 @@ class PLP extends React.Component{
     render() {
         return(
          <div>
-             <FilterPanel/>
+             {/*<FilterPanel/>*/}
             
          <div className={'plp_wrap'}>
              {

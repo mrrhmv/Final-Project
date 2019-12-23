@@ -4,17 +4,13 @@ import './index.scss'
 class Search extends Component {
     constructor(props){
         super(props);
-        this.state = {value: '', class:"header__search-container hidden"};
+        this.state = {value: ''};
         this.handleChange = this.handleChange.bind(this);
         this.searchItem = this.searchItem.bind(this);
-        this.removeSearchContainer = this.removeSearchContainer.bind(this);
     }
 
     handleChange(event){
         this.setState({value: event.target.value});
-    }
-    removeSearchContainer(){
-        this.setState({class: "header__search-container hidden" });
     }
 
     searchItem(event) {
@@ -36,12 +32,12 @@ class Search extends Component {
 
     render() {
         return (
-            <div className={this.state.class}>
+            <div className={"header__search-container hidden"}>
                 <form className={"header__search-form"}>
                     <div>
                         <input className={'header__search-input'} type={"text"} placeholder={"Search for item"}
                                name={"search"} value={this.state.value} onChange={this.handleChange}/>
-                        <button className={'header__cancel-btn'} onClick={this.removeSearchContainer}><i
+                        <button className={'header__cancel-btn'} onClick={closeSearchContainer}><i
                             className="fas fa-times"/></button>
                     </div>
 
@@ -52,4 +48,8 @@ class Search extends Component {
     }
 }
 
+function closeSearchContainer(event) {
+    event.preventDefault();
+    document.querySelector('.header__search-container').classList.add('hidden');
+}
 export default Search;

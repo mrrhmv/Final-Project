@@ -12,7 +12,6 @@ export const setPostsAction=(type)=>{
                 .then(result => {
                     const items = result.filter(obj => obj.type===type);
                     const activeItems = items.filter(item => item.isActive === true);
-                    console.log(activeItems);
                     dispatch({type: 'FETCH_POST_SUCCESS', payload: activeItems});
                 })
         }

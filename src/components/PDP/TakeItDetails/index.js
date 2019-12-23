@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import '../DonateDetails/donatedetails.scss';
+import donate from '../../../img/volunteer.png';
 import UserInfo from "../UserInfo";
 class TakeItDetails extends Component{
     render() {
@@ -7,31 +8,30 @@ class TakeItDetails extends Component{
         const userInfo=[
             {
                 title:'Name',
-                content:`${name}`
+                content:`Ali Valiyev`
             },
             {
                 title:'Email',
-                content:`${email}`
+                content:`ali.valiyev@gmail.com`
             },
             {
                 title:'Phone',
-                content:`${phone}`
+                content:`+994 55 555 55 55`
             }
         ];
 
         return(
             <div className={'donate-details'}>
-                <div className={'donate-details__top'}>
+                <div className={'donate-details__header-container'}>
                     <h3 className={'donate-details__header'}>{title}</h3>
-                    <p className={'donate-details__city-date'}>{city},{date}</p>
+                    <p className={'donate-details__city-date'}>Baku, {date}</p>
+                </div>
+                <img src={donate} className={'donate-details__img'}/>
                     <div className={'donate-details__desc-container takeIt'}>
                         <p className={'donate-details__title'}>Description</p>
                         <p>{description}</p>
-                        <p  className={'donate-details__title'}>Category</p>
-                        <p>{category}</p>
                     </div>
-                </div>
-                <div className={'donate-details__bottom'}>
+
                     <div className={'donate-details__user-info'}>
                         <p className={'donate-details__title'}>User Info</p>
                         {userInfo.map((info,index)=>{
@@ -42,7 +42,6 @@ class TakeItDetails extends Component{
                             />
                         })}
                     </div>
-                </div>
             </div>
         )
     }

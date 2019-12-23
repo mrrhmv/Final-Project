@@ -39,7 +39,7 @@ function App() {
                 <Switch>
                     <Route path='/' exact>
                     <Header/>
-                    <Slider/>
+                    {/*<Slider/>*/}
                     <ListOfProducts/>
                     <Footer
                             all={elements}

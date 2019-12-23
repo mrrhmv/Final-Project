@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import './donatedetails.scss';
+import './media-donatedetails.scss';
 import UserInfo from "../UserInfo";
 import {connect} from "react-redux";
 
@@ -9,32 +10,29 @@ class DonateDetails extends Component{
         const userInfo=[
             {
                 title:'Name',
-                content:`${name}`
+                content:`Ali Valiyev`
             },
             {
                 title:'Email',
-                content:`${email}`
+                content:`ali.valiyev@gmail.com`
             },
             {
                 title:'Phone',
-                content:`${phone}`
+                content:`+994 55 555 55 55`
             }
         ];
 
         return(
 
             <div className={'donate-details'}>
-                <div className={'donate-details__top'}>
+                <div className={'donate-details__header-container'}>
                     <h3 className={'donate-details__header'}>{title}</h3>
-                    <p className={'donate-details__city-date'}>{city},{date}</p>
-                    <img src={`${src}`} className={'donate-details__img'}/>
+                    <p className={'donate-details__city-date'}>Baku, {date}</p>
                 </div>
-                <div className={'donate-bottom'}>
+                <img src={`${src}`} className={'donate-details__img'}/>
                     <div className={'donate-details__desc-container'}>
                         <p className={'donate-details__title'}>Description</p>
-                        <p>{description}</p>
-                        <p  className={'donate-details__title'}>Category</p>
-                        <p>{category}</p>
+                        <p className={'donate-details__content'}>{description}</p>
                     </div>
                     <div className={'donate-details__user-info'}>
                         <p className={'donate-details__title'}>User Info</p>
@@ -46,7 +44,6 @@ class DonateDetails extends Component{
                             />
                         })}
                     </div>
-                </div>
             </div>
         )
     }

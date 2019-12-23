@@ -89,6 +89,7 @@ html{
 }
 .categories {
   &__wrapper {
+    z-index: 1;
     position: absolute;
     top:3.7rem;
     right: 0;
