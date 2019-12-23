@@ -1,6 +1,8 @@
 @media screen and (min-width: 960px) {
 .create-post{
   &__form{
+    margin-left: 3rem;
+    margin-right: 3rem;
     padding-top: 0.5rem;
     grid-template-rows: repeat(3,auto);
     grid-template-columns: repeat(2,auto);

@@ -11,12 +11,13 @@ html{
   &__logo{
     order:1;
     overflow: hidden;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #33bb77;
     cursor: pointer;
     margin-left: 1rem;
     margin-right: 1rem;
+    font-weight: bold;
   }
   &__logo:hover{
     color: #fff;

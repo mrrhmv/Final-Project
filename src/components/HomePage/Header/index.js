@@ -47,7 +47,6 @@ class Header extends Component {
         ];
         return (
         <div className={'header'}>
-            {console.log('Post from header',this.props.posts)}
 
             <Link to='/' className={'header__logo'}>
                 Believe in Tomorrow
