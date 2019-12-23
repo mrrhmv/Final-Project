@@ -32,9 +32,9 @@ class Search extends Component {
 
     render() {
         return (
-            <div className={"header__search-container hidden"}>
+            <div className={"this.state.class"}>
                 <form className={"header__search-form"}>
-                    <div>
+                    <div className={"header__search-div"}>
                         <input className={'header__search-input'} type={"text"} placeholder={"Search for item"}
                                name={"search"} value={this.state.value} onChange={this.handleChange}/>
                         <button className={'header__cancel-btn'} onClick={closeSearchContainer}><i
