@@ -32,7 +32,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div className={"this.state.class"}>
+            <div className={"header__search-container hidden"}>
                 <form className={"header__search-form"}>
                     <div className={"header__search-div"}>
                         <input className={'header__search-input'} type={"text"} placeholder={"Search for item"}
