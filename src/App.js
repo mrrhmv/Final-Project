@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
 import Header from "./components/HomePage/Header";
 import CreateNewPost from "./components/CreateNewPost";
 import Footer from "./components/HomePage/Footer";

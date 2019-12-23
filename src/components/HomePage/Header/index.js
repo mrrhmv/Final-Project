@@ -107,8 +107,8 @@ class Header extends Component {
 
 }
 
-function toggleSearchContainer(e) {
-    e.preventDefault();
+function toggleSearchContainer(event) {
+    event.preventDefault();
     document.querySelector('.header__search-container').classList.toggle('hidden');
     document.querySelector('.header__search-input').value='';
 }
