@@ -4,8 +4,32 @@ import './media-PDP.scss';
 import DonateDetails from "./DonateDetails";
 import TakeItDetails from "./TakeItDetails";
 import Modal from '@material-ui/core/Modal';
+import {withRouter} from "react-router-dom";
+import Header from "../HomePage/Header";
+import Footer from "../HomePage/Footer";
+import {connect} from "react-redux";
 
 function PDP(props){
+    const elements = [{
+        class_name: "About",
+        list : [
+            'About', 'History'
+        ],
+        header: "About"
+    }, {
+        class_name: "Follow",
+        list : [
+            'Facebook', 'Instagram'
+        ],
+        header: "Follow"
+    } , {
+        class_name: "Help",
+        list : [
+            'Contact'
+        ],
+        header: "Help"
+    }];
+
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {
@@ -16,9 +40,30 @@ function PDP(props){
         setOpen(false);
     };
         return(
+            <div>
+                <Header/>
             <div className={"pdp"}>
-             <DonateDetails/>
-             <TakeItDetails/>
+                {props.posts.posts.map((obj)=>{
+                    if(`${obj.id}`===props.match.params.id){
+                        if(obj.type==='donate'){
+                            return  <DonateDetails
+                            title={obj.title}
+                            date={obj.date}
+                            description={obj.description}
+                            src={obj.photos[0]}
+                            />
+                        } else{
+                            return <TakeItDetails
+                                title={obj.title}
+                                date={obj.date}
+                                description={obj.description}
+                            />
+                        }
+                    }
+
+                    })
+                }
+
                 <Modal
                     aria-labelledby="simple-modal-title"
                     aria-describedby="simple-modal-description"
@@ -46,8 +91,19 @@ function PDP(props){
                  <button className={'PDP__delete-btn PDP__btn'} onClick={handleOpen}>Delete</button>
              </div>
             </div>
+                <Footer
+                    all={elements}
+                    class_name="footer"/>
+            </div>
         )
 
 }
+const mapStateToProps=(store)=>{
+    return  {
+        posts:store.posts
+    }
+};
 
-export default PDP;
+
+withRouter(PDP);
+export default connect(mapStateToProps)(PDP);

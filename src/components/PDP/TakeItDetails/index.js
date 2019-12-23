@@ -7,45 +7,28 @@ class TakeItDetails extends Component{
         const userInfo=[
             {
                 title:'Name',
-                content:`Ali Valiyev`
-                // ${name}`
+                content:`${name}`
             },
             {
                 title:'Email',
-                content:`ali.valiyev@mail.ru`
-                // ${email}
+                content:`${email}`
             },
             {
                 title:'Phone',
-                content:`+994 55 987 65 43`
-                // ${phone}`
+                content:`${phone}`
             }
         ];
-        // const userInfo=[
-        //     {
-        //         title:'Name',
-        //         content:`${name}`
-        //     },
-        //     {
-        //         title:'Email',
-        //         content:`${email}`
-        //     },
-        //     {
-        //         title:'Phone',
-        //         content:`${phone}`
-        //     }
-        // ];
 
         return(
             <div className={'donate-details'}>
                 <div className={'donate-details__top'}>
-                    <h3 className={'donate-details__header'}>Title{title}</h3>
-                    <p className={'donate-details__city-date'}>Baku {city}, 12-04-2019 {date}</p>
+                    <h3 className={'donate-details__header'}>{title}</h3>
+                    <p className={'donate-details__city-date'}>{city},{date}</p>
                     <div className={'donate-details__desc-container takeIt'}>
                         <p className={'donate-details__title'}>Description</p>
-                        <p>{description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur autem cupiditate, delectus dicta dignissimos earum, exercitationem iusto nesciunt numquam, officiis praesentium ratione repellat reprehenderit rerum saepe similique tempora tenetur.</p>
+                        <p>{description}</p>
                         <p  className={'donate-details__title'}>Category</p>
-                        <p>Books {category}</p>
+                        <p>{category}</p>
                     </div>
                 </div>
                 <div className={'donate-details__bottom'}>
