@@ -3,6 +3,7 @@
 }
 .header{
   position: relative;
+  font-family: "Lato", sans-serif;
   &__search-container{
     background-color: white;
     z-index: 1;
@@ -19,10 +20,12 @@
     grid-template-rows: repeat(2,auto);
     justify-content: center;
   }
-
+  &__search-div {
+    border-bottom: 1px solid #333333;
+  }
   &__search-input {
     border: none;
-    border-bottom: 1px solid #333333;
+    /*border-bottom: 1px solid #333333;*/
     outline: none;
     font-size: 1rem;
   }
@@ -58,4 +61,8 @@
   &__cancel-btn:hover{
     color: #33bb77;
   }
+}
+
+.button {
+  background-color: #33bb77;
 }
