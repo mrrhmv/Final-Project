@@ -1,0 +1,25 @@
+@media screen and (min-width: 960px) {
+  .donate-details {
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(3,1fr);
+
+    &__header-container {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      grid-column: 1/4;
+    }
+
+    &__img {
+      order:3;
+    }
+
+    &__desc-container {
+      order:4;
+    }
+
+    &__user-info {
+     order:2;
+    }
+  }
+
+}

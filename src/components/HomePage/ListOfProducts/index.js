@@ -1,7 +1,9 @@
 import React from "react";
-import "./ItemOfProducts/index"
+import "./ItemOfProducts/index";
+import "./index.scss";
 import ItemOfProducts from "./ItemOfProducts";
 import ItemOfProducts2 from "./ItemOfProducts2";
+import loading from '../../../img/loading.svg';
 
 class ListOfProducts extends React.Component{
     constructor(props){
@@ -61,7 +63,7 @@ class ListOfProducts extends React.Component{
                                         />)
                                 }
                             }
-                        })) : "Loading..."
+                        })) :<div className={'div'}><img src={loading} className={'loading-img'} alt={'Loading...'} /></div>
                 }
             </div>
         )

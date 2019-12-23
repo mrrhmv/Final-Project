@@ -23,7 +23,8 @@ class CreateNewPost extends Component{
             photosClass:'create-post__form-item',
             form1:'create-post__form',
             form2:'create-post__form hidden',
-            required:true
+            required:true,
+            height:'create-post'
         };
         this.Next = this.Next.bind(this);
         this.Create = this.Create.bind(this);
@@ -78,9 +79,7 @@ class CreateNewPost extends Component{
                 }else{
                     result.photos="";
                 }
-
-                console.log(result);
-                this.setState({formName:'Post Was Successfully Created! Thank You!', form2:'create-post__form hidden'} );
+                this.setState({formName:'Post Was Successfully Created! Thank You!',height:'create-post height', form2:'create-post__form hidden'} );
     })
     }
 
@@ -136,11 +135,10 @@ class CreateNewPost extends Component{
         ];
 
         return (
-            <div className={'create-post'}>
+            <div className={this.state.height}>
                 <h2 className={'create-post__header'}>Create New Post</h2>
                 <p className={'create-post__formName'}>{this.state.formName}</p>
                 <form onSubmit={this.Next} className={this.state.form1} >
-
                     {inputList.map((input, key)=>{
                         return(
                             <Inputs
